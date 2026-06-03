@@ -156,10 +156,17 @@ El análisis de reconocimiento de entidades nombradas (NER) revela los actores q
 
 | Indicador | Valor |
 |---|---|
+| Índice Fernández Huerta (legibilidad ES) | **51.9 / 100** |
+| Palabras por oración | 25.8 |
+| Sílabas por palabra | 2.14 |
 | Type-Token Ratio (TTR) | 0.1475 |
 | MTLD (riqueza léxica) | 366.73 |
 
-Un TTR de 0.15 en un documento de 433 páginas indica vocabulario repetitivo — esperable en un programa de gobierno donde ciertos conceptos deben reiterarse para construir coherencia ideológica. Un MTLD de 366 es sólido para un texto político formal.
+El índice de legibilidad usa la fórmula de **Fernández Huerta (1959)** — la adaptación calibrada para español de la escala Flesch original. Un puntaje de 51.9 equivale a dificultad de **texto universitario o revista especializada**: no es ilegible, pero está un escalón por encima de lo que la mayoría de personas lee cómodamente. Para referencia, un periódico popular ronda 65–70 y un contrato legal cae por debajo de 30.
+
+Lo más llamativo no es el índice sino las **25.8 palabras por oración** — casi el doble de lo recomendado para comunicación política efectiva (12–15 palabras). Oraciones tan largas dificultan encontrar inconsistencias, promesas sin financiamiento o silencios convenientes. No hay que ir a la fórmula para verlo: basta leer cualquier página al azar.
+
+Un TTR de 0.15 en 433 páginas indica vocabulario repetitivo — esperable cuando ciertos conceptos deben reiterarse para construir coherencia ideológica. Un MTLD de 366 es sólido para un texto político formal.
 
 ![Distribución de longitud de oraciones](graficos/estructura/sentence_length_hist.png)
 

@@ -566,23 +566,50 @@ avg_word_len = np.mean(word_lengths)
 print(f"Avg sentence length: {avg_sent_len:.1f} words")
 print(f"Avg word length: {avg_word_len:.1f} chars")
 
-# Flesch-Kincaid adapted (Spanish approximation)
-# FRE = 206.835 - 1.015*(words/sentences) - 84.6*(syllables/words)
-def count_syllables_es(word):
-    vowels = "aeiouáéíóúü"
-    return max(1, sum(1 for c in word.lower() if c in vowels))
+# Legibilidad: Fernández Huerta (1959) — fórmula Flesch adaptada al español
+# Referencia: Fernández Huerta, J. (1959). Medidas sencillas de lecturabilidad.
+# Fórmula: 206.84 - 1.02*(palabras/oraciones) - 60*(sílabas/palabras)
+# Escala: 0-30 muy difícil | 30-50 difícil | 50-60 algo difícil | 60-70 normal | 70+ fácil
 
-syllable_counts = [count_syllables_es(w) for pg in pages_raw
-                   for w in pg.split() if w.isalpha()]
-asl = avg_sent_len
-asw = np.mean(syllable_counts)
-fre = 206.835 - 1.015*asl - 84.6*asw
-print(f"Flesch Reading Ease (Spanish approx): {fre:.1f}")
+def count_syllables_es(word):
+    """Cuenta sílabas en español considerando diptongos."""
+    word = word.lower()
+    vowels   = "aeiouáéíóúü"
+    diphthongs = {"ai","au","ei","eu","oi","ou","ia","ie","io","iu","ua","ue","ui","uo"}
+    count, i = 0, 0
+    while i < len(word):
+        if word[i] in vowels:
+            if i + 1 < len(word) and word[i:i+2] in diphthongs:
+                count += 1
+                i += 2
+            else:
+                count += 1
+                i += 1
+        else:
+            i += 1
+    return max(1, count)
+
+all_words_raw   = [w for pg in pages_raw for w in pg.split() if w.isalpha()]
+total_words_raw = len(all_words_raw)
+total_sents_raw = len(sentences_raw)
+total_syllables = sum(count_syllables_es(w) for w in all_words_raw)
+
+ppo = total_words_raw / max(total_sents_raw, 1)   # palabras por oración
+psp = total_syllables / max(total_words_raw, 1)    # sílabas por palabra
+
+fh_score = 206.84 - 1.02 * ppo - 60 * psp
+print(f"Fernández Huerta (español): {fh_score:.1f} / 100")
+print(f"  → palabras/oración: {ppo:.1f} | sílabas/palabra: {psp:.2f}")
 
 with open(os.path.join(OUT_DIR, "readability.txt"), "w") as f:
-    f.write(f"Avg sentence length: {avg_sent_len:.1f} words\n")
-    f.write(f"Avg word length: {avg_word_len:.1f} chars\n")
-    f.write(f"Flesch Reading Ease (ES approx): {fre:.1f}\n")
+    f.write("LEGIBILIDAD — Fernández Huerta (1959)\n")
+    f.write("Fórmula: 206.84 - 1.02*(pal/orac) - 60*(síl/pal)\n")
+    f.write("Escala: 0-30 muy difícil | 30-50 difícil | 50-60 algo difícil | 60-70 normal\n\n")
+    f.write(f"Índice Fernández Huerta:  {fh_score:.1f} / 100\n")
+    f.write(f"Palabras por oración:     {ppo:.1f}\n")
+    f.write(f"Sílabas por palabra:      {psp:.2f}\n")
+    f.write(f"Longitud media oración:   {avg_sent_len:.1f} palabras\n")
+    f.write(f"Longitud media palabra:   {avg_word_len:.1f} caracteres\n")
 
 # Sentence length histogram
 fig, ax = plt.subplots(figsize=(10, 5))

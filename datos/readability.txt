@@ -1,3 +1,14 @@
-Avg sentence length: 25.6 words
-Avg word length: 4.7 chars
-Flesch Reading Ease (ES approx): -4.2
+LEGIBILIDAD — Fernández Huerta (1959)
+Fórmula: 206.84 - 1.02*(palabras/oraciones) - 60*(sílabas/palabras)
+Escala: 0-30 muy difícil | 30-50 difícil | 50-60 algo difícil | 60-70 normal | 70+ fácil
+
+Índice Fernández Huerta:  51.9 / 100
+Palabras por oración:     25.8
+Sílabas por palabra:      2.14
+Longitud media oración:   25.6 palabras
+Longitud media palabra:   4.7 caracteres
+
+NOTA: La fórmula Flesch original (en inglés) no es válida para español.
+Se usa Fernández Huerta (1959), calibrada con corpus en español.
+Referencia: Fernández Huerta, J. (1959). Medidas sencillas de lecturabilidad.
+Consigna, 214, 29-32.
