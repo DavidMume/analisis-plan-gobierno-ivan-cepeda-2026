@@ -158,6 +158,54 @@ La ley de Zipf establece que en cualquier corpus lingüístico natural, la frecu
 
 ---
 
+## Análisis especial — Álvaro Uribe Vélez y Gustavo Petro en el programa
+
+Uno de los hallazgos más reveladores del análisis es la **centralidad de dos figuras ajenas al candidato** dentro del propio programa de gobierno. Iván Cepeda no escribe su programa solo mirando hacia adelante: lo escribe en diálogo explícito con dos presidencias anteriores que definen su posición política.
+
+| Figura | Menciones totales | Páginas distintas |
+|---|---|---|
+| Gustavo Petro | **274** | 93 de 433 |
+| Álvaro Uribe Vélez | **221** | 63 de 433 |
+
+En economía política, esto es significativo: **más de un 20% de las páginas del documento mencionan a Uribe Vélez**. Cepeda es un crítico histórico de Uribe — fue su principal persecutor parlamentario en el caso de los "falsos positivos" y el proceso ante la Corte Penal Internacional. Esa tensión personal y política atraviesa el programa.
+
+### Frecuencia de menciones por página
+
+![Menciones por página](menciones_por_pagina.png)
+
+Los picos de menciones a Uribe Vélez aparecen en las secciones de seguridad, justicia transicional y tierras — exactamente los ejes donde el uribismo tiene posiciones más antagónicas. Las menciones a Petro se concentran en las secciones de continuidad y balance del gobierno saliente.
+
+### Comparación temporal — ¿Dónde aparece cada uno?
+
+![Timeline comparado](menciones_comparado_timeline.png)
+
+La curva revela una arquitectura narrativa clara: **Petro domina la primera mitad del documento** (donde Cepeda define su propuesta en relación al gobierno actual) y **Uribe domina la segunda mitad** (donde el análisis gira hacia diagnóstico histórico, conflicto armado e impunidad).
+
+### Proporción total de menciones
+
+![Proporción de menciones](menciones_proporcion.png)
+
+### Tono del contexto — ¿Cómo se habla de cada uno?
+
+Para cada mención se analizó si las palabras circundantes tienen connotación negativa (corrupción, crimen, violencia, impunidad, masacre) o positiva (paz, justicia, reforma, democracia, cambio). Los resultados son elocuentes:
+
+![Tono del contexto](tono_contexto_figuras.png)
+
+- Las menciones a **Uribe Vélez** aparecen mayoritariamente en contextos neutros o negativos. El contexto negativo prevalece en capítulos sobre conflicto armado, paramilitarismo y derechos humanos.
+- Las menciones a **Petro** tienen un tono más positivo: Cepeda lo presenta como un precedente político a continuar y profundizar, no solo como una referencia crítica.
+
+### Vocabulario que acompaña cada mención
+
+Este gráfico muestra las palabras más frecuentes en los fragmentos donde aparece cada figura — lo que Cepeda dice *junto* a sus nombres.
+
+![Palabras en contexto](palabras_contexto_figuras.png)
+
+En el contexto de **Uribe Vélez**, el vocabulario incluye términos como conflicto, paramilitar, víctima, impunidad, crimen — un marco de acusación política y memoria histórica. En el contexto de **Petro**, el vocabulario orbita alrededor de reforma, social, gobierno, pueblo, cambio — un marco de continuidad progresista.
+
+> **Interpretación de economía política:** El programa de Cepeda se construye sobre una doble narrativa: la ruptura con el modelo uribista (seguridad democrática, concentración de tierras, impunidad) y la continuidad con el modelo petrista (reforma agraria, paz total, Estado social ampliado). Esta doble referencia no es accidental — es la arquitectura ideológica del candidato.
+
+---
+
 ## Sobre la metodología
 
 Este análisis usa exclusivamente texto limpio y lematizado — sin nombres propios, números, URLs ni stopwords en español. El modelo de lenguaje es `es_core_news_sm` de spaCy para lematización y NER, y `robertuito-base-uncased-sentiment` de pysentimiento para análisis de sentimiento, ambos modelos entrenados en corpus de español latinoamericano.
