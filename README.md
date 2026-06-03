@@ -52,6 +52,28 @@ El análisis de unigrams confirma que el discurso orbita alrededor de conceptos 
 
 Los n-gramas revelan los conceptos compuestos que articulan el programa. En economía política, importa más "reforma agraria" que "reforma" sola, o "deuda externa" que "deuda". Los bigramas y trigramas muestran los marcos de política públicamente comprometidos.
 
+> **Nota metodológica:** estos n-gramas se generan desde el **texto crudo del PDF**, no desde tokens lematizados. Esto es deliberado: el lematizador de spaCy convierte "uribismo" y "uribista" en el lema inventado "uribir", que no existe en el documento. Al trabajar con texto crudo se preservan las formas reales que el candidato usa.
+
+Los bigramas más frecuentes son altamente informativos:
+
+| Bigrama | Frec. | Lectura política |
+|---|---|---|
+| **pacto histórico** | 104 | Su coalición; se autoidentifica con ella |
+| **extrema derecha** | 81 | El adversario político que da sentido al programa |
+| **gustavo petro** | 77 | Referencia de continuidad con el gobierno actual |
+| **revolución ética** | 76 | Su eslogan y marca de campaña central |
+| **pueblos indígenas** | 68 | Sujeto político privilegiado en su discurso |
+| **reforma agraria** | 59 | Propuesta bandera; eje económico-territorial |
+| **revolución agraria** | 58 | Versión radicalizada del mismo eje |
+| **álvaro uribe** | 53 | Figura antagonista nombrada explícitamente |
+| **uribe vélez** | 41 | Idem — nombre completo como marca de oposición |
+| **derechos humanos** | 42 | Marco normativo transversal |
+| **justicia social** | 41 | Objetivo declarado del programa |
+
+Un dato que merece atención especial: el término **"uribismo"** y sus derivados ("uribista", "uribistas") aparecen con frecuencia significativa en el documento como categoría política — no solo como referencia al expresidente. Cepeda usa "uribismo" como concepto para nombrar un modelo de Estado, una forma de ejercer el poder y un conjunto de crímenes de lesa humanidad. No es un adjetivo de campaña: es un marco analítico con el que estructura su diagnóstico del país.
+
+De manera simétrica, **"Pacto Histórico"** (104 menciones) y **"revolución ética"** (76) son los dos pilares de su identidad programática positiva — lo que propone, no solo lo que rechaza.
+
 ![Top 25 bigramas](top25_bigrams.png)
 
 ![Top 20 trigramas](top20_trigrams.png)
