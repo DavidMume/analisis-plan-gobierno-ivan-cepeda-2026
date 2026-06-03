@@ -1,0 +1,3 @@
+Avg sentence length: 25.6 words
+Avg word length: 4.7 chars
+Flesch Reading Ease (ES approx): -4.2

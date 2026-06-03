@@ -1,0 +1,96 @@
+
+Top similar to 'paz' (matched: 'paz'):
+  justicia: 0.923
+  equidad: 0.877
+  integral: 0.859
+  acuerdo: 0.851
+  firmante: 0.833
+  diálogo: 0.828
+  justi: 0.826
+  democracia: 0.825
+  seguridad: 0.822
+  búsqueda: 0.818
+
+Top similar to 'economía' (matched: 'economía'):
+  productivo: 0.891
+  zona: 0.881
+  empre: 0.881
+  impulso: 0.871
+  urbano: 0.869
+  fortalecer: 0.869
+  ciento: 0.869
+  campesino: 0.869
+  usurpado: 0.867
+  rural: 0.866
+
+Top similar to 'justicia' (matched: 'justicia'):
+  paz: 0.923
+  equidad: 0.848
+  integral: 0.830
+  reparación: 0.826
+  tad: 0.811
+  conla: 0.810
+  centralidad: 0.807
+  verdad: 0.805
+  firmante: 0.804
+  democracia: 0.792
+
+Top similar to 'pobreza' (matched: 'pobreza'):
+  desigualdad: 0.964
+  monetario: 0.921
+  superación: 0.872
+  erradicar: 0.862
+  exclusión: 0.857
+  acabar: 0.854
+  pobre: 0.846
+  padecer: 0.843
+  corrup: 0.826
+  breza: 0.813
+
+Top similar to 'derecho' (matched: 'derecho'):
+  proteger: 0.939
+  protección: 0.922
+  prósperar: 0.922
+  soberanía: 0.916
+  defensa: 0.909
+  cultura: 0.908
+  oportunidad: 0.906
+  trabajo: 0.903
+  defen: 0.901
+  reconocer: 0.899
+
+Top similar to 'tierra' (matched: 'tierra'):
+  hectárea: 0.963
+  campesinado: 0.927
+  entregar: 0.923
+  campesino: 0.920
+  ciento: 0.912
+  formalizar: 0.905
+  entregar él: 0.896
+  extensión: 0.895
+  zona: 0.875
+  reserva: 0.872
+
+Top similar to 'salud' (matched: 'salud'):
+  educación: 0.971
+  acceso: 0.939
+  vivienda: 0.936
+  sistema: 0.932
+  limpio: 0.932
+  conversión: 0.927
+  desarrollo: 0.924
+  lud: 0.923
+  crear: 0.923
+  atención: 0.921
+
+Top similar to 'educación' (matched: 'educación'):
+  acceso: 0.973
+  salud: 0.971
+  vivienda: 0.967
+  limpio: 0.939
+  lud: 0.937
+  eléctrico: 0.934
+  calidad: 0.920
+  vía: 0.917
+  universal: 0.915
+  conversión: 0.914
